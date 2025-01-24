@@ -1,3 +1,6 @@
+import AuthTemplate from "../template/authTemplate"
+
 export default function Page() {
-    return <h1>THIS IS AUTH PAGE</h1>
+    const currentPage: string = "mapping"
+    return <AuthTemplate currentPage={currentPage}></AuthTemplate>
 }
