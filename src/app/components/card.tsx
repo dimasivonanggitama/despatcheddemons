@@ -4,12 +4,13 @@ interface Props {
     bgColor?: string
     border?: string
     borderRadius?: string
+    height?: string
     children?: ReactNode
     flexDirection?: string
     padding?: string
 }
 
-export default function Card({bgColor = "bg-white", border = "border-2", borderRadius = "rounded-lg", children, flexDirection = "flex-row", padding = "p-2"} : Props) {
+export default function Card({bgColor = "bg-white", border = "border-2", borderRadius = "rounded-lg", children, flexDirection = "flex-row", padding = "p-2", height = "min-h-96"} : Props) {
     return <div className={`
         ${bgColor}
         ${border}
@@ -18,8 +19,8 @@ export default function Card({bgColor = "bg-white", border = "border-2", borderR
         flex
         ${flexDirection} 
         gap-2
+        ${height}
         items-center
-        min-h-96  
         min-w-96
         ${padding}
         shadow-md
